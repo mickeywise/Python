@@ -22,6 +22,7 @@ popup_content = f"""
 {forecast[3][0][-8:-6]}h: {round(forecast[3][1])}°F <img src="http://openweathermap.org/img/wn/{forecast[3][-1]}@2x.png" width=35>
 """
 
+#Create Popup object and add it to Geopoint
 popup = Popup(popup_content, max_width=400)
 popup.add_to(geopoint)
 geopoint.add_to(mymap)
