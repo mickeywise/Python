@@ -1,3 +1,4 @@
+import webbrowser
 from fpdf import FPDF
 
 
@@ -54,8 +55,8 @@ class PDFReport:
         
         #Insert Period label and value
         pdf.set_font(family="Times", size=14, style='B')
-        pdf.cell(w=100, h=80, txt="Period:", border=0)
-        pdf.cell(w=150, h=80, txt=bill.period, border=0, ln=1)
+        pdf.cell(w=100, h=40, txt="Period:", border=0)
+        pdf.cell(w=150, h=40, txt=bill.period, border=0, ln=1)
 
         # Insert name and due amount of the first flatmate
         pdf.set_font(family="Times", size=12)
@@ -67,6 +68,7 @@ class PDFReport:
         pdf.cell(w=150, h=20, txt=flatmate2_pay, border=0, ln=1)
 
         pdf.output(self.filename)
+        webbrowser.open(self.filename)
 
 
 
