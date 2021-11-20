@@ -9,9 +9,9 @@ locations = [[-1.25, 36.8],[-1.29, 36.87],[-1.24, 36.83]]
 #Folium Map Instance
 mymap = Map(location = [-1.29, 36.80])
 
-for loc in locations:
+for lat, lon in locations:
     #Create a Geopoint Instance
-    geopoint = Geopoint(latitude = loc[0], longitude = loc[1])
+    geopoint = Geopoint(latitude = lat, longitude = lon)
 
     forecast = geopoint.get_weather()
     popup_content = f"""
