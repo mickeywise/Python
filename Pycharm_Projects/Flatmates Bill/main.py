@@ -1,4 +1,4 @@
-import webbrowser
+import webbrowser 
 from fpdf import FPDF
 
 
